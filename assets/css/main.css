@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Carollo';
+  src: url(/assets/fonts/carollo-playscript/Regular.otf);
+}
+
+@font-face {
+  font-family: 'CarolloItalic';
+  src: url(/assets/fonts/carollo-playscript/Regular-Italic.otf);
+}
+
+@font-face {
+  font-family: 'CarolloBlack';
+  src: url(/assets/fonts/carollo-playscript/Black.otf);
+}
+
+@font-face {
+  font-family: 'CarolloBlackItalic';
+  src: url(/assets/fonts/carollo-playscript/Black-Italic.otf);
+}
+
+
+@font-face {
+  font-family: 'Shrikhand';
+  src: url(/assets/fonts/Shrikhand/Shrikhand-Regular.ttf);
+}
+* {
+  font-family: 'Carollo', 'Courier Prime', 'Ubuntu Mono', 'IBM Plex Mono', monospace;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Shrikhand';
+  color: #ffe78e;
+  text-shadow: black 4px 3px;
+}

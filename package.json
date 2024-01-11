@@ -1,0 +1,24 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxtjs/google-fonts": "^3.0.2",
+    "@nuxtjs/tailwindcss": "^6.8.0",
+    "eslint": "^8.50.0",
+    "nuxt": "^3.7.3",
+    "sass": "^1.69.7"
+  },
+  "dependencies": {
+    "@formkit/auto-animate": "^0.8.0",
+    "@nuxt/image": "^1.0.0-rc.2"
+  }
+}
