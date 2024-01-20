@@ -3,9 +3,9 @@
     <a class="" href="/">
       <img src="/img/logo-baja.png" alt="logo-kundera_ediciones">
     </a>
-    <ul class="flex flex-row gap-4">
+    <ul class="flex flex-row gap-4" :class="isActive">
       <li v-for="link in links" :key="link.id">
-        <div class="" aria-label="navbar-link" @click="scrollToSection(link.url)">{{ link.name }}</div>
+        <div class="" :class="isActive(link)" aria-label="navbar-link" @click="scrollToSection(link.url)">{{ link.name }}</div>
       </li>
     </ul>
   </nav>
@@ -13,15 +13,47 @@
 
 <script>
 export default {
+  data() {
+    return {
+      activeLink: null
+    };
+  },
+  mounted() {
+  window.addEventListener('scroll', this.handleScroll);
+},
+beforeUnmount() {
+  window.removeEventListener('scroll', this.handleScroll);
+},
+methods: {
+  handleScroll() {
+    const currentPosition = window.pageYOffset;
+    const sections = ['#somos', '#hacemos', '#nosotras', '#talleres', '#contacto'];
+
+    // Find the active section based on the scrolling position
+    for (let i = sections.length - 1; i >= 0; i--) {
+      const section = document.querySelector(sections[i]);
+      if (section.offsetTop <= currentPosition) {
+        this.activeLink = sections[i];
+        break;
+      }
+    }
+  },
+},
+  computed: {
+    isActive() {
+      return (link) => link.url === this.activeLink ? 'active' : '';
+    }
+  },
   methods: {
     scrollToSection(target) {
       const targetSection = document.querySelector(target);
       if (targetSection) {
-        const offset = document.getElementById('navbar').offsetHeight + 50;
+        const offset = document.getElementById('navbar').offsetHeight + 0;
         window.scrollTo({
           top: targetSection.offsetTop - offset,
           behavior: 'smooth',
         });
+        this.activeLink = target;
       }
     },
   },
@@ -45,11 +77,11 @@ const links = ref([
     name: 'nosotras',
     url: '#nosotras'
   },
-  {
+/*   {
     id: 4,
     name: 'talleres y consultorías',
     url: '#talleres'
-  },
+  }, */
   {
     id: 5,
     name: 'contacto',
@@ -66,6 +98,7 @@ nav
   display: flex
   align-items: center
   background-color: #fff
+  z-index: 3
   img
     height: 50px
     width: auto
@@ -76,4 +109,7 @@ ul
       cursor: pointer
 a
   text-decoration: none
+.navbar-link.active
+  font-weight: bold
+
 </style>
