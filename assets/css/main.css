@@ -31,3 +31,13 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffe78e;
   text-shadow: black 4px 3px;
 }
+
+h2 {
+  font-size: 5em;
+  padding: 0 5px
+}
+
+a {
+  color: #ffe78e;
+  text-decoration: underline;
+}
