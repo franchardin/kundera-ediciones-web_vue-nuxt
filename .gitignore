@@ -22,6 +22,7 @@ logs
 .env
 .env.*
 !.env.example
+<<<<<<< HEAD
 .npmrc
 
 # Local asdf config file
@@ -31,3 +32,6 @@ logs
 package-lock.json
 .tool-versions
 package-lock.json
+=======
+.npmrc
+>>>>>>> 52701d3 (primera versión de la web)

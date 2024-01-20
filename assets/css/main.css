@@ -36,6 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 {
   font-size: 5em;
+<<<<<<< HEAD
   padding: 0 5px;
   @media screen and (max-width: 740px) {
     font-size: 3.5em;
@@ -55,11 +56,15 @@ section {
   @media screen and (max-width: 1200px) {
     padding: 40px 7.5% 120px;
   }
+=======
+  padding: 0 5px
+>>>>>>> 52701d3 (primera versión de la web)
 }
 
 a {
   color: #ffe78e;
   text-decoration: underline;
+<<<<<<< HEAD
 }
 
 .titleContainer {
@@ -67,4 +72,6 @@ a {
   @media screen and (max-width: 480px) {
     flex-direction: column !important;
   }
+=======
+>>>>>>> 52701d3 (primera versión de la web)
 }

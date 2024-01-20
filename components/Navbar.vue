@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <nav id="navbar" class="flex flex-row content-center justify-between px-5 py-2">
     <div class="logoAndSocials flex content-center justify-center">
       <button @click="handleClick('#top')">
@@ -24,6 +25,15 @@
         <a :href="social.url" target="_blank">
           <img class="socialIcon" :src="social.icon">
         </a>
+=======
+  <nav id="navbar" class="flex flex-row align-center justify-between px-5 py-2">
+    <a class="" href="/">
+      <img src="/img/logo-baja.png" alt="logo-kundera_ediciones">
+    </a>
+    <ul class="flex flex-row gap-4" :class="isActive">
+      <li v-for="link in links" :key="link.id">
+        <div class="" :class="isActive(link)" aria-label="navbar-link" @click="scrollToSection(link.url)">{{ link.name }}</div>
+>>>>>>> 52701d3 (primera versión de la web)
       </li>
     </ul>
   </nav>
@@ -37,10 +47,54 @@ import mail from 'assets/icons/mail.svg'
 export default {
   data() {
     return {
+<<<<<<< HEAD
       activeLink: null,
       justClicked: false,
       sections: ['#somos', '#hacemos', '#nosotras', '#contacto'],
     };
+=======
+      activeLink: null
+    };
+  },
+  mounted() {
+  window.addEventListener('scroll', this.handleScroll);
+},
+beforeUnmount() {
+  window.removeEventListener('scroll', this.handleScroll);
+},
+methods: {
+  handleScroll() {
+    const currentPosition = window.pageYOffset;
+    const sections = ['#somos', '#hacemos', '#nosotras', '#talleres', '#contacto'];
+
+    // Find the active section based on the scrolling position
+    for (let i = sections.length - 1; i >= 0; i--) {
+      const section = document.querySelector(sections[i]);
+      if (section.offsetTop <= currentPosition) {
+        this.activeLink = sections[i];
+        break;
+      }
+    }
+  },
+},
+  computed: {
+    isActive() {
+      return (link) => link.url === this.activeLink ? 'active' : '';
+    }
+  },
+  methods: {
+    scrollToSection(target) {
+      const targetSection = document.querySelector(target);
+      if (targetSection) {
+        const offset = document.getElementById('navbar').offsetHeight + 0;
+        window.scrollTo({
+          top: targetSection.offsetTop - offset,
+          behavior: 'smooth',
+        });
+        this.activeLink = target;
+      }
+    },
+>>>>>>> 52701d3 (primera versión de la web)
   },
   mounted() {
   window.addEventListener('scroll', this.handleScroll);
@@ -176,6 +230,7 @@ a
   text-decoration: none
 .navbar-link.active
   font-weight: bold
+<<<<<<< HEAD
 @media screen and (max-width: 720px)
   nav
     flex-direction: column
@@ -209,4 +264,7 @@ a
     margin-bottom: 4px
     gap: 10px
     flex-wrap: wrap
+=======
+
+>>>>>>> 52701d3 (primera versión de la web)
 </style>

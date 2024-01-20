@@ -1,5 +1,15 @@
 <template>
+<<<<<<< HEAD
   <header id="top">
+=======
+  <header>
+    <!-- <h1>Edición y corrección de textos</h1> -->
+    <!-- <div id="container">
+      <img id="img_flores" src="../assets/img/Floresweb.svg" alt="">
+      <img src="../assets/img/logo/maquina-negra.png" alt="">
+      <img src="../assets/img/Rayitas.svg" alt="">
+    </div> -->
+>>>>>>> 52701d3 (primera versión de la web)
   </header>
 </template>
 

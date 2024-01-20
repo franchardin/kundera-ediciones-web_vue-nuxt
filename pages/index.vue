@@ -5,6 +5,10 @@
   <Somos id="somos" class="mt-0" />
   <Hacemos id="hacemos" />
   <Nosotras id="nosotras" />
+<<<<<<< HEAD
+=======
+  <!-- <Talleres id="talleres" /> -->
+>>>>>>> 52701d3 (primera versión de la web)
   <Contacto id="contacto"/>
 </template>
 
@@ -17,6 +21,10 @@ wrapper
   gap: 240px
   background-color: $mora
 section
+<<<<<<< HEAD
+=======
+  padding: 60px 20% 240px
+>>>>>>> 52701d3 (primera versión de la web)
   div
     display: flex
     flex-direction: row
