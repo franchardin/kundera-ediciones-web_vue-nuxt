@@ -14,10 +14,6 @@
     <img src="../assets/img/logo/maquina.svg" alt="">
   </div>
 </template>
-<script>
-export default {
-}
-</script>
 <style lang="sass" scoped>
 div
   display: flex
@@ -34,5 +30,4 @@ img
   height: auto
   aspect-ratio: auto
   transform: translateX(-120px)
-p
 </style>
