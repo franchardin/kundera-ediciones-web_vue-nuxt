@@ -5,7 +5,6 @@
   <Somos id="somos" class="mt-0" />
   <Hacemos id="hacemos" />
   <Nosotras id="nosotras" />
-  <!-- <Talleres id="talleres" /> -->
   <Contacto id="contacto"/>
 </template>
 

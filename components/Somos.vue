@@ -1,7 +1,7 @@
 <template>  
   <section :id=id :class=class :style=style>
     <div>
-      <h2 class="">somos</h2>
+      <h2 class="">Somos</h2>
       <img class="h-auto" src="../assets/img/Floresweb.svg" alt="">
     </div>
     <p>

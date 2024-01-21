@@ -3,15 +3,26 @@
     <a class="" href="/">
       <img src="/img/logo-baja.png" alt="logo-kundera_ediciones">
     </a>
-    <ul class="flex flex-row gap-4" :class="isActive">
+    <ul class="socials">
+      <li v-for="social in socials">
+        <a :href="social.url" target="_blank">
+          <img class="socialIcon" :src="social.icon">
+        </a>
+      </li>
+    </ul>
+    <ul class="flex flex-row gap-4 links" :class="isActive">
       <li v-for="link in links" :key="link.id">
-        <div class="" :class="isActive(link)" aria-label="navbar-link" @click="scrollToSection(link.url)">{{ link.name }}</div>
+        <div class="navbar-link" :class="isActive(link)" aria-label="navbar-link" @click="scrollToSection(link.url)">{{ link.name }}</div>
       </li>
     </ul>
   </nav>
 </template>
 
 <script>
+import instagram from 'assets/icons/instagram.svg'
+import linkedin from 'assets/icons/linkedin.svg'
+import mail from 'assets/icons/mail.svg'
+
 export default {
   data() {
     return {
@@ -61,6 +72,21 @@ methods: {
 </script>
 
 <script setup>
+const socials = [
+  {
+    url: 'https://www.instagram.com/kunderaediciones/',
+    icon: instagram,
+  },
+  {
+    url: 'https://www.linkedin.com/company/kundera-ediciones/about/',
+    icon: linkedin,
+  },
+  {
+    url: 'mailto:kunderaediciones@gmail.com',
+    icon: mail,
+  },
+]
+
 const links = ref([
   {
     id: 1,
@@ -102,11 +128,20 @@ nav
   img
     height: 50px
     width: auto
-
+ul.socials
+  display: flex
+  gap: 10px
+  margin-right: auto
+  margin-left: 3%
 ul
   li
     div
       cursor: pointer
+    a
+      img
+        height: 35px
+        &:hover
+          opacity: .7
 a
   text-decoration: none
 .navbar-link.active
