@@ -5,12 +5,19 @@
     </div>
     <div class="flex flex-col justify-start content-start text-start gap-5">
       <p>Si estás buscando ayuda para corregir un trabajo, una tesis, un texto para una página o blog, un posteo para redes o un proyecto literario estamos para acompañarte en cualquier parte del recorrido.</p>
-      <p>¡Escribinos! 
-        Para corrección y edición de textos 
-        completá <a href="https://forms.gle/jbUMKPTjFL7JymRPA">el formulario</a>
-      </p>
-      <p>Por consultorias y talleres mandanos un mail y te enviamos información.</p>
-      <p><a href="mailto:kundera.ediciones@gmail.com">kundera.ediciones@gmail.com</a></p>
+      <div class="display-flex">
+        <div>
+          <p>¡Escribinos! 
+            Para corrección y edición de textos 
+            completá <a href="https://forms.gle/jbUMKPTjFL7JymRPA">el formulario</a>
+            </p>
+          <p>Por consultorias y talleres mandanos un mail y te enviamos información.</p>
+          <p><a href="mailto:kundera.ediciones@gmail.com">kundera.ediciones@gmail.com</a></p>
+        </div>
+        <!-- <div>
+          <img src="@/assets/img/logo/maquina-transp.png" alt="">
+        </div> -->
+      </div>
     </div>
   </section>
 </template>
@@ -39,4 +46,6 @@ section
     max-height: 168px
     width: 100%
     margin-bottom: 40px
+  a
+    color: #272727
 </style>

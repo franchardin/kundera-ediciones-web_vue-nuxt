@@ -1,12 +1,14 @@
 <template>
   <section :id="id" :class="class" :style="style">
     <div>
-      <h2 class="">nosotras</h2>
+      <h2 class="">Nosotras</h2>
     </div>
     <div class="profileWrapper">
       <div class="profile" v-for="p in perfiles">
-        <img class="profileImg" :src="p.picture" alt="">
-        <img class="lines" :src="lines" alt="">
+        <div class="profileImgContainer">
+          <img class="profileImg" :src="p.picture" alt="imagen-perfil">
+        </div>
+        <img class="lines" src="@/assets/img/Rayitas.svg" alt="">
         <h3>{{ p.name }}</h3>
         <div class="textWrapper">
           <p>{{p.fullDescription}}</p>
@@ -21,7 +23,6 @@
 import perfil_1 from 'assets/img/fotos/perfil_1.png'
 import perfil_2 from 'assets/img/fotos/perfil_2.jpeg'
 import perfil_3 from 'assets/img/fotos/perfil_3.jpeg'
-import lines from 'assets/img/Rayitas.png'
 
 export default {
   props: ["id", "class", "style"],
@@ -94,13 +95,21 @@ section
         font-weight: 700
         font-size: 1.2em
         margin: 10px 0
-  img.profileImg
+        align-self: center
+  div.profileImgContainer
     border-radius: 100%
-    width: 100%
-    height: auto
+    height: 100%
+    width: auto
     aspect-ratio: 1
     object-fit: cover
+    max-height: 155px
+    max-width: 155px
+    overflow: hidden
+    align-self: center
+    img
+      filter: saturate(0)
   img.lines
     width: 100%
     height: auto
+    margin: 10px 0
 </style>

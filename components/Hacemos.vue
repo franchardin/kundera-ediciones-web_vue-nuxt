@@ -1,7 +1,7 @@
 <template>
   <section :id="id" :class="class" :style="style">
     <div>
-      <h2>hacemos</h2>
+      <h2>Hacemos</h2>
     </div>
     <ul class="list-disc custom-list" style="list-style: disc;">
       <li v-for="item in list" :key="item">
