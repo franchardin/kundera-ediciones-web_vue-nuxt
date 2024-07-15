@@ -1,11 +1,5 @@
 <template>
-  <header>
-    <!-- <h1>Edición y corrección de textos</h1> -->
-    <!-- <div id="container">
-      <img id="img_flores" src="../assets/img/Floresweb.svg" alt="">
-      <img src="../assets/img/logo/maquina-negra.png" alt="">
-      <img src="../assets/img/Rayitas.svg" alt="">
-    </div> -->
+  <header id="top">
   </header>
 </template>
 
