@@ -23,4 +23,9 @@ logs
 .env.*
 !.env.example
 .npmrc
+
+# Local asdf config file
 .tool-versions
+
+# package-lock
+package-lock.json
