@@ -9,10 +9,12 @@
           <img class="profileImg" :src="p.picture" alt="imagen-perfil">
         </div>
         <img class="lines" src="@/assets/img/Rayitas.svg" alt="">
-        <h3>{{ p.name }}</h3>
+        <nuxt-link :to="`/perfil/${p.url}`">
+          <h3>{{ p.name }}</h3>
+        </nuxt-link>
         <div class="textWrapper">
-          <p>{{p.fullDescription}}</p>
-          <!-- <p v-for="d in p.description">{{d}}</p> -->
+          <!-- <p>{{p.fullDescrperfiliption}}</p> -->
+          <p v-for="d in p.description">{{d}}</p>
         </div>
       </div>
     </div>
@@ -32,6 +34,7 @@ export default {
         {
           picture: perfil_2,
           name: "Camila García Reyna",
+          url: "camila",
           description: [
             "Escritora, poeta y editora.",
             "Docente de escritura creativa. Licenciada ",
@@ -43,6 +46,7 @@ export default {
         {
           picture: perfil_3,
           name: "Lucía Falón",
+          url: "lucia",
           description: [
             "Escritora, profesora de Lengua y Literatura y copywriting. ",
             "Autora de literatura infantil. ",
@@ -54,6 +58,7 @@ export default {
         {
           picture: perfil_1,
           name: "Cintia Mussolini",
+          url: "cintia",
           description: [
             "Escritora, poeta y editora.",
             "Docente de escritura creativa. Licenciada ",
@@ -70,14 +75,14 @@ export default {
 
 <style lang="sass">
 section
-  background-color: $amarillo
+  background-color: $amarilloClaro
   h2 
     color: $rojo
   .profileWrapper
     display: flex
     align-items: flex-start
     justify-content: space-between
-    margin-top: 80px
+    margin-top: 40px
     .profile
       display: flex
       flex-direction: column

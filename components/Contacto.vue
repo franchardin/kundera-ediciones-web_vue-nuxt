@@ -9,7 +9,7 @@
         <div>
           <p>¡Escribinos! 
             Para corrección y edición de textos 
-            completá <a href="https://forms.gle/jbUMKPTjFL7JymRPA">el formulario</a>
+            completá <a href="https://forms.gle/jbUMKPTjFL7JymRPA" target="_blank">el formulario</a>
             </p>
           <p>Por consultorias y talleres mandanos un mail y te enviamos información.</p>
           <p><a href="mailto:kundera.ediciones@gmail.com">kundera.ediciones@gmail.com</a></p>
