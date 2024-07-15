@@ -1,18 +1,29 @@
 <template>
-  <nav id="navbar" class="flex flex-row align-center justify-between px-5 py-2">
-    <button @click="handleClick('#top')">
-      <img src="/img/logo-baja.png" alt="logo-kundera_ediciones">
-    </button>
-    <ul class="socials">
-      <li v-for="social in socials">
+  <nav id="navbar" class="flex flex-row content-center justify-between px-5 py-2">
+    <div class="logoAndSocials flex content-center justify-center">
+      <button @click="handleClick('#top')">
+        <img src="/img/logo-baja.png" alt="logo-kundera_ediciones">
+      </button>
+      <ul class="topSocials socials">
+        <li v-for="social in socials" class="content-center">
+          <a :href="social.url" target="_blank">
+            <img class="socialIcon" :src="social.icon">
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="navLinks">
+      <ul class="flex flex-row sm:gap-4 links" :class="isActive">
+        <li v-for="link in links" :key="link.id">
+          <div class="navbar-link" :class="isActive(link)" aria-label="navbar-link" @click="handleClick(link.url)">{{ link.name }}</div>
+        </li>
+      </ul>
+    </div>
+    <ul class="bottomSocials socials">
+      <li v-for="social in socials" class="content-center">
         <a :href="social.url" target="_blank">
           <img class="socialIcon" :src="social.icon">
         </a>
-      </li>
-    </ul>
-    <ul class="flex flex-row gap-4 links" :class="isActive">
-      <li v-for="link in links" :key="link.id">
-        <div class="navbar-link" :class="isActive(link)" aria-label="navbar-link" @click="handleClick(link.url)">{{ link.name }}</div>
       </li>
     </ul>
   </nav>
@@ -145,11 +156,13 @@ nav
   img
     height: 50px
     width: auto
-ul.socials
-  display: flex
-  gap: 10px
-  margin-right: auto
-  margin-left: 3%
+  .socials.topSocials
+    display: flex
+    gap: 10px
+    margin-right: auto
+    margin-left: 3%
+  .bottomSocials
+    display: none
 ul
   li
     div
@@ -163,5 +176,37 @@ a
   text-decoration: none
 .navbar-link.active
   font-weight: bold
-
+@media screen and (max-width: 720px)
+  nav
+    flex-direction: column
+    .logoAndSocials
+      justify-content: space-between
+      width: 100%
+      .socials.topSocials
+        margin-right: 3%
+    .navLinks
+      margin-top: 6px
+      margin-bottom: 4px
+@media screen and (max-width: 639px)
+  nav
+    .navLinks
+      ul.links
+        gap: 6px
+@media screen and (max-width: 370px)
+  div.logoAndSocials
+    justify-content: center
+  ul.socials.topSocials
+    display: none
+  .links
+    flex-wrap: wrap
+    justify-content: center
+  .socials.bottomSocials
+    display: flex
+    align-self: center
+    justify-self: center
+    margin-right: 3%
+    margin-top: 6px
+    margin-bottom: 4px
+    gap: 10px
+    flex-wrap: wrap
 </style>
