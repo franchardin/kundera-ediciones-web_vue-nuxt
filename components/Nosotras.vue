@@ -1,7 +1,9 @@
 <template>
   <section :id="id" :class="class" :style="style">
-    <div>
-      <h2 class="">Nosotras</h2>
+    <div class="titleContainer">
+      <div>
+        <h2 class="">Nosotras</h2>
+      </div>
     </div>
     <div class="profileWrapper">
       <div class="profile" v-for="p in perfiles">
@@ -78,19 +80,30 @@ section
   background-color: $amarilloClaro
   h2 
     color: $rojo
+    max-width: min-content
   .profileWrapper
     display: flex
     align-items: flex-start
     justify-content: space-between
     margin-top: 40px
+    @media screen and (max-width: 720px)
+        flex-wrap: wrap
+        justify-content: center
+        gap: 64px
     .profile
       display: flex
       flex-direction: column
       max-width: 28%
+      @media screen and (max-width: 720px)
+        max-width: 70%
+        align-items: center
+        text-align: center
       .textWrapper
         display: flex
         flex-direction: column
         align-items: flex-start
+        @media screen and (max-width: 720px)
+          align-items: center
         p
           text-wrap: balance
       h3
@@ -117,4 +130,7 @@ section
     width: 100%
     height: auto
     margin: 10px 0
+    @media screen and (max-width: 720px)
+      width: 50%
+      align-self: center
 </style>

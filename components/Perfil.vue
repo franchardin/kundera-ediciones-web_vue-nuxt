@@ -1,13 +1,12 @@
 <template>
-  <div class="perfil">
+  <section class="perfil">
     <div class="profileImgContainer">
       <img :src="profile.picture" alt="imagen-perfil">
     </div>
     <img class="lines" src="@/assets/img/Rayitas.svg" alt="">
     <h1>{{ profile.name }}</h1>
     <p v-for="p in profile.fullDescription">{{ p }}</p>
-    <button @click="scrollToTop">botón</button>
-  </div>
+  </section>
 </template>
 
 <style lang="sass" scoped>
@@ -51,7 +50,7 @@ img.lines
 </style>
 
 <script>
-import _url from './_url.vue'; // Import _url component
+import _url from '../pages/_url.vue'; // Import _url component
 import perfil_1 from 'assets/img/fotos/perfil_1.png'
 import perfil_2 from 'assets/img/fotos/perfil_2.jpeg'
 import perfil_3 from 'assets/img/fotos/perfil_3.jpeg'
@@ -113,6 +112,7 @@ export default {
   created() {
     const profileUrl = this.$route.name;
     this.profile = this.profiles.find(p => p.url === profileUrl);
+    console.log(profileUrl, this.profile)
   },
   mounted() {
    this.scrollToTop()

@@ -36,10 +36,35 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 {
   font-size: 5em;
-  padding: 0 5px
+  padding: 0 5px;
+  @media screen and (max-width: 740px) {
+    font-size: 3.5em;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 2.5em;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 2.25em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+section {
+  padding: 60px 15% 240px;
+  @media screen and (max-width: 1200px) {
+    padding: 40px 7.5% 120px;
+  }
 }
 
 a {
   color: #ffe78e;
   text-decoration: underline;
+}
+
+.titleContainer {
+  display: flex;
+  @media screen and (max-width: 480px) {
+    flex-direction: column !important;
+  }
 }

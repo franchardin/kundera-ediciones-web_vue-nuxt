@@ -29,7 +29,6 @@ export default {
 <style lang="sass" scoped>
 section
   background-color: $turquesa
-  padding: 60px 20% 240px
   display: flex
   align-items: flex-start
   justify-content: flex-start

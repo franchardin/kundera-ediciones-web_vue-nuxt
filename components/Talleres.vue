@@ -13,7 +13,6 @@ export default {
 <style lang="sass" scoped>
 section
   background-color: $turquesa
-  padding: 60px 20% 240px
   display: flex
   align-items: flex-start
   flex-direction: column
@@ -30,6 +29,6 @@ section
     img
       max-height: 168px
       width: auto
-      transform: rotate(-45deg) translateX(-30px)
+      transform: rotate(-45deg) translateX(12px)
       z-index: 0
 </style>

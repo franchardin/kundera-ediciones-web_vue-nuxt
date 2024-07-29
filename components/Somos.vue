@@ -1,8 +1,12 @@
 <template>  
   <section :id=id :class=class :style=style>
-    <div>
-      <h2 class="">Somos</h2>
-      <img class="h-auto" src="../assets/img/Floresweb.svg" alt="">
+    <div class="titleContainer">
+      <div>
+        <h2 class="">Somos</h2>
+      </div>
+      <div>
+        <img class="h-auto" src="../assets/img/Floresweb.svg" alt="">
+      </div>
     </div>
     <p>
       Somos lectoras, escritoras y autoras. Entendemos que toda escritura es un proceso creativo donde cada detalle es importante. Nuestra misión es acompañar ese proceso con herramientas y conocimientos fundamentales para fortalecer y potenciar cada recorrido.</p>
@@ -18,10 +22,12 @@ export default {
 <style lang="sass" scoped>
 section
   background-color: $turquesa
-  padding: 60px 20% 240px
   display: flex
   align-items: flex-start
   flex-direction: column
+  .titleContainer
+    @media screen and (max-width: 800px)
+      margin-bottom: 0
   div
     display: flex
     flex-direction: row
@@ -32,9 +38,17 @@ section
     max-height: 168px
     width: 100%
     margin-bottom: 40px
+    @media screen and (max-width: 800px)
+      margin-bottom: 0
     img
       max-height: 168px
       width: auto
-      transform: rotate(-45deg) translateX(-30px)
+      transform: rotate(-45deg) translateX(12px)
       z-index: 0
+      @media screen and (max-width: 720px)
+        max-height: 130px
+      @media screen and (max-width: 480px)
+        max-height: 130px
+        margin-left: auto
+        margin-right: auto
 </style>

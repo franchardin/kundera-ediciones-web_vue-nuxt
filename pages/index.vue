@@ -17,7 +17,6 @@ wrapper
   gap: 240px
   background-color: $mora
 section
-  padding: 60px 20% 240px
   div
     display: flex
     flex-direction: row

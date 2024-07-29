@@ -31,7 +31,6 @@ export default {
 <style lang="sass" scoped>
 section
   background-color: $rojo
-  padding: 60px 20% 240px
   div
     display: flex
     flex-direction: row
