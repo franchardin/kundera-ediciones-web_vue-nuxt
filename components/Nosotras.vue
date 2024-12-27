@@ -62,10 +62,9 @@ export default {
           name: "Cintia Mussolini",
           url: "cintia",
           description: [
-            "Escritora, poeta y editora.",
-            "Docente de escritura creativa. Licenciada ",
-            "en Letras Modernas y Técnica en Corrección Literaria por la ",
-            "Universidad Nacional de Córdoba."
+            "Periodista, autora  e investigadora.",
+            "Maestranda en Periodismo Narrativo UNSAM - Revista Anfibia.",
+            "Licenciada en Comunicación Social por la Universidad Nacional de Quilmes."
           ],
           fullDescription: "Periodista, autora  e investigadora. Maestranda en Periodismo Narrativo UNSAM - Revista Anfibia. Licenciada en Comunicación Social por la Universidad Nacional de Quilmes."
         },
