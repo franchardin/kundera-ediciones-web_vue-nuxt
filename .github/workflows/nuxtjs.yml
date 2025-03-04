@@ -61,4 +61,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          artifact-name: nuxt-artifact  # Asegúrate de que este nombre coincida
+          artifact_name: nuxt-artifact 
