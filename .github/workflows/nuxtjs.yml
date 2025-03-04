@@ -47,7 +47,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: nuxt-artifact
+          name: nuxt-artifact  # Ensure this matches the name used in the deploy step
           path: .output/public
 
   deploy:
