@@ -47,7 +47,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: nuxt-artifact  # Ensure this matches with the deployment step
+          name: nuxt-artifact  # Artifact name
           path: .output/public
 
   deploy:
@@ -60,9 +60,11 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
-          name: nuxt-artifact  # This must match the upload name
+          name: nuxt-artifact  # Ensure this matches the upload name
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}  # Ensure you're using the GitHub token
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # The folder parameter needs to be set to the path of the downloaded artifact
+          folder: .output/public
