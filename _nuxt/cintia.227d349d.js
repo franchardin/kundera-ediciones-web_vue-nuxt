@@ -1,0 +1,1 @@
+import{_ as t}from"./Perfil.89afd418.js";import{_ as r,K as c,o as n}from"./entry.8f4f745d.js";import"./_url.961071c0.js";import"./perfil_3.02823f97.js";import"./Rayitas.31581d31.js";const _={};function e(s,a){const o=t;return n(),c(o)}const u=r(_,[["render",e]]);export{u as default};
