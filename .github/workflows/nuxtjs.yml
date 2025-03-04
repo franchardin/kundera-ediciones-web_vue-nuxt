@@ -44,11 +44,6 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Static HTML export with Nuxt
         run: ${{ steps.detect-package-manager.outputs.manager }} run generate
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: nuxt-artifact  # Ensure this matches the name used in the deploy step
-          path: .output/public
 
   deploy:
     environment:
@@ -62,4 +57,4 @@ jobs:
         uses: actions/deploy-pages@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          # No need for download-artifact step or folder parameter
+          folder: .output/public  # Specify the output directory directly
