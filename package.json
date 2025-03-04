@@ -5,6 +5,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "deploy": "gh-pages -d .output/public",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -14,6 +15,7 @@
     "@nuxtjs/google-fonts": "^3.0.2",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "eslint": "^8.50.0",
+    "gh-pages": "^6.3.0",
     "nuxt": "^3.7.3",
     "sass": "^1.69.7"
   },
