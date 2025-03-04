@@ -48,7 +48,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: nuxt-artifact
-          path: .output/public  # Cambia esto a .output/public
+          path: .output/public
 
   deploy:
     environment:
