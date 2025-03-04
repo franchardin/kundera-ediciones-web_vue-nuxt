@@ -57,4 +57,4 @@ jobs:
         uses: actions/deploy-pages@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          folder: .output/public  # Specify the output directory directly
+          artifact_name: nuxt-artifact  # Specify the name of the artifact to be deployed
