@@ -48,7 +48,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: nuxt-artifact
-          path: ./dist
+          path: .output/public  # Cambia esto a .output/public
 
   deploy:
     environment:
@@ -61,4 +61,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          artifact_name: nuxt-artifact 
+          artifact_name: nuxt-artifact
