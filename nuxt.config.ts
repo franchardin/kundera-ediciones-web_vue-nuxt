@@ -1,6 +1,10 @@
 export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: true },
+    target: 'static',
+  router: {
+    base: '/franchardin/kundera-ediciones-web_vue-nuxt'
+  },
   app: {
     baseURL: '/franchardin/kundera-ediciones-web_vue-nuxt', 
   },
